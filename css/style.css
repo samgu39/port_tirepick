@@ -310,6 +310,7 @@ address {font-style: normal;}
 
 /* pick slide */
 .pick .bx-wrapper {background: none; border: 0; box-shadow: none; margin:0 auto;}
+.pick .bx-wrapper .bx-loading {display: none;}
 .pick .pick_btn {position: absolute; left: 50%; top: 40px; min-width: 1210px; height: 80px; margin: 0 auto; transform: translateX(-50%);}
 .pick .pick_btn .proprev {display: block; position: absolute; right: 114px; bottom: 0; background: #192649; width: 46px; height: 46px; border-radius: 50%; font-size: 0; z-index: 1;}
 .pick .pick_btn .proprev:before {content: ''; display: block; position: absolute; left:18px; top:50%; transform: translateY(-50%); width: 8px; height: 15px; background: url(../img/ico_sp.png) no-repeat; background-position: -80px -110px; z-index: -1;}
@@ -433,7 +434,8 @@ address {font-style: normal;}
 
 /* 하단 박스 */
 /* 퀵메뉴 */
-#footer .quick {position: fixed; right: 14%; bottom: 10px; /*bottom:332px;*/ z-index: 1;}
+#footer .quick {position: fixed; right: 14%; bottom: 10px; z-index: 1; transition: all .3s;}
+#footer .quick.top {bottom:332px;}
 #footer .quick ul li {width: 63px; height: 63px;}
 #footer .quick ul .quick_talk {background: url(../img/ico_sp.png) no-repeat; background-position: -425px -15px;}
 #footer .quick ul .quick_top {background: url(../img/ico_sp.png) no-repeat; background-position: -425px -78px; margin-bottom: -75px; transition: all .3s;}
