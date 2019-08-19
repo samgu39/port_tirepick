@@ -90,6 +90,7 @@ address {font-style: normal;}
 #head .hd .gnb {position: absolute; left:50%; top:0; transform: translateX(-50%); width: 700px;}
 #head .hd .gnb h2 {width: 0; height: 0; font-size: 0;}
 #head .hd .gnb ul li {position: relative; float:left; width: 140px; height: 104px;}
+#head.on .hd .gnb ul li {height: 84px;}
 #head .hd .gnb ul li a {display: block; width: 100%; height: 100%; font-weight: bold; font-size: 18px; text-align: center; line-height: 104px; transition: all .3s;}
 #head .hd .gnb ul li:hover a {color: #c626d5;}
 #head .hd .gnb ul li ul {display: none; position: absolute; height: 276px; border-right: 1px solid #e6e6ed; z-index: 99;}
