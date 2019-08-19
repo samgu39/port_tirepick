@@ -293,6 +293,7 @@ window.onload = function(){
     var sectionBox05 = document.getElementById('skip05').offsetTop;
     var sectionBox06 = document.getElementById('skip06').offsetTop;
     var topBtn = document.querySelector('.quick_top');
+    var footer = document.getElementById('footer').offsetTop - 800;
     
     topBtn.addEventListener("click",topSlide);
     
@@ -307,7 +308,7 @@ window.onload = function(){
     window.addEventListener("scroll", scrollEvent);
     
     function scrollEvent(){
-        var scrollTop = window.scrollY;
+        var scrollTop = window.pageYOffset;
         
         if (scrollTop > 80) {
             headTop.classList.add('on');
@@ -318,6 +319,14 @@ window.onload = function(){
         };
         
         // 상단 메뉴바 on 클래스 추가
+        
+        if (scrollTop > footer){
+            document.querySelector('.quick').classList.add('top');
+        }else {
+            document.querySelector('.quick').classList.remove('top');
+        }
+        
+        // 하단에 quick메뉴가 닿을 경우 top 클래스 추가
         
         if (scrollTop > sectionBox01 - 300) {
             document.getElementById('skip01').classList.add('on');
