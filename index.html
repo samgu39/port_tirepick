@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>타이어픽(TIREPICK)</title>
+    <meta name="author" content="김지현">
+    <meta name="keywords" content="김지현,포트폴리오,타이어픽,웹퍼블리셔">
+    <meta name="description" content="김지현 웹 퍼블리셔 포트폴리오 주제는 타이어픽 입니다.">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- skip -->
+    <div class="skip">
+        <h2>스킵메뉴</h2>
+        <ul>
+            <li><a href="#skip01">내 차에 맞는 타이어 PICK</a></li>
+            <li><a href="#skip02">타이어픽에서 타이어 사는 법!</a></li>
+            <li><a href="#skip03">반짝 특가 상품</a></li>
+            <li><a href="#skip04">구매후기</a></li>
+            <li><a href="#skip05">타이어픽의 장착점</a></li>
+            <li><a href="#skip06">이벤트</a></li>
+        </ul>
+    </div>
+    <!-- //skip -->
+    <!-- 팝업창 -->
+    <div class="popup">
+        <h2>팝업창</h2>
+        <div class="popup_main">
+            <!-- 팝업창 본문 -->
+            <img src="img/popup/MainOpenPopup_PC.jpg" title="타이어픽 오픈 프로모션" alt="타이어픽 오픈 프로모션">
+            <!-- //팝업창 본문 -->
+        </div>
+        <div class="popup_close">
+            <!-- 팝업창 닫기 -->
+            <form>
+                <input type="checkbox" id="today_none" class="today">
+                <label for="today_none" class="today_none">오늘은 그만보기 체크박스</label>
+                <label for="today_none" class="today_p">오늘은 그만보기</label>
+            </form>
+            <div class="close">
+                <a href="#">닫기<p></p></a>
+            </div>
+            <!-- //팝업창 닫기 -->
+        </div>
+    </div>
+    <div class="dim"></div>
+    <!-- //팝업창 -->
+    <!-- 포트폴리오 명시 -->
+    <div class="portfolio_popup">
+        <div class="portfolio_popup_top">
+            <h2>포트폴리오 페이지입니다.</h2>
+        </div>
+        <div class="portfolio_popup_bottom">
+            <p>
+                해당 페이지는 취업을 목적으로 한 비상업적 포트폴리오 사이트입니다.<br>
+                페이지 내에 사용된 이미지, 문구에 대한 저작권은 모두 본사(<a href="https://www.tire-pick.com" target="_blank">TIREPICK</a>)에 있음을 알려드립니다.
+            </p>
+        </div>
+        <div class="portfolio_popup_close"><a href="#"></a></div>
+    </div>
+    <!-- //포트폴리오 명시 -->
+    <header id="head">
+        <div class="hd">
+            <!-- 상단 내용 -->
+            <div class="logo">
+                <h1><a href="index.html"><img src="img/logo.png" title="타이어픽" alt="타이어픽"></a></h1>
+            </div>
+            <nav class="gnb">
+                <h2>상단 메뉴</h2>
+                <ul class="clear">
+                    <li><a href="#">타이어픽</a>
+                        <ul class="submenu first">
+                            <li><a href="#">차종으로 찾기</a></li>
+                            <li><a href="#">사이즈로 찾기</a></li>
+                            <li><a href="#">브랜드로 찾기</a></li>
+                            <li><a href="#">타이어 정보</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고민타파 서비스</a>
+                        <ul class="submenu">
+                            <li><a href="#">서비스 안내</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">장착점 안내</a>
+                        <ul class="submenu">
+                            <li><a href="#">장착점 검색</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">혜택/이벤트</a>
+                        <ul class="submenu">
+                            <li><a href="#">제휴 혜택</a></li>
+                            <li><a href="#">이벤트 안내</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객센터</a>
+                        <ul class="submenu">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">1:1고객 상담</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sns_menu clear">
+                <h2>SNS 상단 메뉴</h2>
+                <a href="#"><i class="fas fa-user"></i><p>로그인/회원가입</p></a>
+                <a class="list" href="#"><i class="fas fa-heart"></i><p>최근 본 상품</p></a>
+                <a class="cart" href="#"><i class="fas fa-shopping-cart"></i><p>장바구니</p></a>
+            </div>
+            <!-- //상단 내용 -->
+        </div>
+        <div class="submenu_back">
+            <div class="subhd wrap">
+                <h3>나에게 맞는<br>타이어 PICK!</h3>
+                <div class="submenu_back_left_img"></div>
+                <div class="submenu_back_right_img"></div>
+            </div>
+        </div>
+        <div class="sns_menu_box">
+            <!-- sns 박스 탭메뉴 슬라이드 -->
+            <h3>최근 본 상품 &amp; 장바구니</h3>
+            <div class="sns_menu_box_tab">
+                <div class="tab_menu">
+                    <!-- 탭메뉴 리스트 -->
+                    <ul class="clear">
+                        <li class="list"><a href="#"><i class="fas fa-heart"></i>최근 본 상품</a></li>
+                        <li class="cart"><a href="#"><i class="fas fa-shopping-cart"></i>장바구니</a></li>
+                    </ul>
+                    <!-- //탭메뉴 리스트 -->
+                    <div class="sns_menu_box_close"><a href="#">닫기</a></div>
+                </div>
+                <div class="sns_menu_box_tab_box">
+                    <!-- 탭메뉴01 -->
+                    <div class="sns_menu_box_list">
+                        <p>최근 본 상품이 없습니다.</p>
+                    </div>
+                    <!-- //탭메뉴01 -->
+                    <div class="sns_menu_box_shopping">
+                        <!-- 탭메뉴02 -->
+                        <p class="no_data">장바구니에 담긴 상품이 없습니다.</p>
+                        <div class="shopping_bottom clear">
+                            <p>결제 예상 금액(0개)</p>
+                            <p class="price"><strong>0</strong> 원</p>
+                            <a href="#">장바구니 바로가기</a>
+                        </div>
+                        <!-- //탭메뉴02 -->
+                    </div>
+                </div>
+            </div>
+            <!-- //sns 박스 탭메뉴 슬라이드 -->
+        </div>
+    </header>
+    <main id="main">
+        <!-- 메인 내용 -->
+        <section class="slide">
+            <!-- 메인 슬라이드 -->
+            <h3>슬라이드</h3>
+            <div class="slide_list">
+                <div class="slide_box">
+                    <div class="slide01">
+                        <h4><img src="img/slide/visual01_190703_03_PC.png" title="오픈 기념! 타이어 우주 최저가로 사자!" alt=""></h4>
+                        <img class="img_front" src="img/slide/visual01_190703_02_PC.png" alt="">
+                        <img class="img_back" src="img/slide/visual01_190703_01_PC.png" alt="">
+                        <a href="#"><p title-name="자세히보기">자세히보기</p></a>
+                    </div>
+                    <div class="slide02">
+                        <h4><img src="img/slide/visual_190719_03_PC.png" title="타이어 구매하면 현실 피로 100% 해소 피로회복세트 증정!" alt="타이어 구매하면 현실 피로 100% 해소 피로회복세트 증정!"></h4>
+                        <img class="img_front" src="img/slide/visual_190719_02_PC.png" alt="">
+                        <img class="img_back" src="img/slide/visual_190719_01_PC.png" alt="">
+                        <a href="#"><p title-name="자세히보기">자세히보기</p></a>
+                    </div>
+                    <div class="slide03">
+                        <h4><img src="img/slide/temp_visual_03_03_PC.png" title="타이어는 내가 골라놨어! 넌 PICK만 해!" alt="타이어는 내가 골라놨어! 넌 PICK만 해!"></h4>
+                        <img class="img_front" src="img/slide/temp_visual_03_02_PC.png" alt="">
+                        <img class="img_back" src="img/slide/temp_visual_03_01_PC.png" alt="">
+                        <a href="#"><p title-name="자세히보기">자세히보기</p></a>
+                    </div>
+                    <div class="slide04">
+                        <h4><img src="img/slide/visual02_190703_03_PC.png" title="타이어가 마음에 안들면 30일 무상 교환!" alt="타이어가 마음에 안들면 30일 무상 교환!"></h4>
+                        <img class="img_front" src="img/slide/visual02_190703_02_PC.png" alt="">
+                        <img class="img_back" src="img/slide/visual02_190703_01_PC.png" alt="">
+                        <a href="#"><p title-name="자세히보기">자세히보기</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide_menu">
+                <h4>타이어픽 메뉴</h4>
+                <ul>
+                    <li><a class="car" href="#"><i class="fas fa-car"></i> 차종으로 찾기</a></li>
+                    <li><a class="size" href="#"><i class="fas fa-ruler-horizontal"></i> 사이즈로 찾기</a></li>
+                    <li><a class="brand" class="search" href="#"><i class="fas fa-search-plus"></i> 브랜드로 찾기</a></li>
+                </ul>
+            </div>
+            <!-- 타이어픽 메뉴 팝업 -->
+            <div class="slide_menu_popup">
+                <div class="popup_top">
+                    <h5>타이어찾기</h5>
+                    <ul class="clear">
+                        <li><a class="car" href="#">차종별</a></li>
+                        <li><a class="size" href="#">사이즈별</a></li>
+                        <li><a class="brand" href="#">브랜드별</a></li>
+                    </ul>
+                </div>
+                <div class="popup_bottom">
+                    <div class="popup01">
+                        <!-- 차종별 -->
+                        <div class="search">
+                            <form>
+                                <input type="text" id="search_text" class="search_text" placeholder="제조사/모델명을 입력해주세요.">
+                            </form>
+                        </div>
+                        <div class="search_category">
+                            <h6>카테고리</h6>
+                            <ul class="clear">
+                                <li><a class="active" href="#">제조사</a></li>
+                                <li><a href="#">차종</a></li>
+                                <li><a href="#">모델</a></li>
+                                <li><a href="#">연식</a></li>
+                                <li><a href="#">사이즈</a></li>
+                            </ul>
+                        </div>
+                        <div class="search_box">
+                            <div class="search_box_left">
+                                <p>국산차</p>
+                                <ul>
+                                    <li><a href="#">기아</a></li>
+                                    <li><a href="#">르노삼성</a></li>
+                                    <li><a href="#">쉐보레</a></li>
+                                    <li><a href="#">쌍용</a></li>
+                                    <li><a href="#">현대</a></li>
+                                </ul>
+                            </div>
+                            <div class="search_box_right">
+                                <p>해외차</p>
+                                <ul>
+                                    <li><a href="#">AUDI</a></li>
+                                    <li><a href="#">BMW</a></li>
+                                    <li><a href="#">CHRYSLER</a></li>
+                                    <li><a href="#">FORD</a></li>
+                                    <li><a href="#">HONDA</a></li>
+                                    <li><a href="#">INFINITY</a></li>
+                                    <li><a href="#">LAND ROVER</a></li>
+                                    <li><a href="#">LEXUS</a></li>
+                                    <li><a href="#">MERCEDES-BENZ</a></li>
+                                    <li><a href="#">MINI</a></li>
+                                    <li><a href="#">NISSAN</a></li>
+                                    <li><a href="#">PEUGEOT</a></li>
+                                    <li><a href="#">TOYOTA</a></li>
+                                    <li><a href="#">VOLKSWAGEN</a></li>
+                                    <li><a href="#">VOLVO</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //차종별 -->
+                    </div>
+                    <div class="popup02">
+                        <!-- 사이즈별 -->
+                        <div class="top_box">
+                            <h6>메뉴 목록</h6>
+                            <ul class="clear">
+                                <li class="active">단면폭</li>
+                                <li>편평비</li>
+                                <li>인치</li>
+                            </ul>
+                        </div>
+                        <div class="size_category">
+                            <h6>카테고리</h6>
+                            <ul class="clear">
+                                <li><a class="active" href="#">단면폭</a></li>
+                                <li><a href="#">편평비</a></li>
+                                <li><a href="#">인치</a></li>
+                            </ul>
+                        </div>
+                        <div class="size_box">
+                            <p>단면폭</p>
+                            <ul>
+                                <li><a href="#">155</a></li>
+                                <li><a href="#">165</a></li>
+                                <li><a href="#">175</a></li>
+                                <li><a href="#">185</a></li>
+                                <li><a href="#">195</a></li>
+                                <li><a href="#">205</a></li>
+                                <li><a href="#">215</a></li>
+                                <li><a href="#">225</a></li>
+                                <li><a href="#">235</a></li>
+                                <li><a href="#">245</a></li>
+                                <li><a href="#">255</a></li>
+                                <li><a href="#">265</a></li>
+                                <li><a href="#">275</a></li>
+                                <li><a href="#">285</a></li>
+                                <li><a href="#">295</a></li>
+                                <li><a href="#">305</a></li>
+                                <li><a href="#">315</a></li>
+                                <li><a href="#">325</a></li>
+                                <li><a href="#">335</a></li>
+                            </ul>
+                        </div>
+                        <!-- //사이즈별 -->
+                    </div>
+                    <div class="popup03">
+                        <!-- 브랜드별 -->
+                        <div class="top_box">
+                            <h6><strong>타이어픽</strong>에서 다양한<br>브랜드를 찾아보세요!</h6>
+                        </div>
+                        <div class="brand_category">
+                            <h6>카테고리</h6>
+                            <ul class="clear">
+                                <li><a class="active" href="#">브랜드</a></li>
+                                <li><a href="#">패턴</a></li>
+                                <li><a href="#">사이즈</a></li>
+                            </ul>
+                        </div>
+                        <div class="brand_box">
+                            <p>브랜드</p>
+                            <ul>
+                                <li><a href="#"><img src="./img/1_brandlogo_pc.png" title="금호" alt="금호">금호</a></li>
+                                <li><a href="#"><img src="./img/2_brandlogo_pc.png" title="넥센" alt="넥센">넥센</a></li>
+                                <li><a href="#"><img src="./img/4_brandlogo_pc.png" title="아킬레스" alt="아킬레스">아킬레스</a></li>
+                                <li><a href="#"><img src="./img/6_brandlogo_pc.png" title="요코하마" alt="요코하마">요코하마</a></li>
+                            </ul>
+                        </div>
+                        <!-- //브랜드별 -->
+                    </div>
+                </div>
+                <div class="slide_menu_popup_close"><a href="#">닫기</a></div>
+            </div>
+            <!-- //타이어픽 메뉴 팝업 -->
+            <!-- //메인 슬라이드 -->
+        </section>
+        <section id="skip01" class="pick">
+            <div class="wrap">
+                <h3>내 차에 맞는 타이어<br>여기서 바로 PICK</h3>
+            </div>
+            <!-- 내 차에 맞는 타이어 PICK -->
+            <div class="pick_slide">
+                <div>
+                    <div class="wrap">
+                        <div class="pick_box">
+                            <h4><strong>LF 쏘나타</strong> 가솔린/디젤/LPG/HEV/PHEV</h4>
+                            <div>
+                                <a href="#">
+                                    <i>1</i>
+                                    <img src="./img/CP672_3.png" title="넉센" alt="넉센">
+                                    <p class="name">넉센</p>
+                                    <p class="number">CP672</p>
+                                    <div class="star">
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <i>2</i>
+                                    <img src="./img/KU27_3.png" title="금호" alt="금호">
+                                    <p class="name">금호</p>
+                                    <p class="number">엑스타 LX KU27</p>
+                                    <div class="star">
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <i>3</i>
+                                    <img src="./img/TA31_3.png" title="넉센" alt="넉센">
+                                    <p class="name">금호</p>
+                                    <p class="number">솔루스 TA31</p>
+                                    <div class="star">
+                                        <span class="star0"></span>
+                                        <span class="star0"></span>
+                                        <span class="star0"></span>
+                                        <span class="star0"></span>
+                                        <span class="star0"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car_img01"></div>
+                    <div class="wrap">
+                        <p class="list_number">1/2</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="wrap">
+                        <div class="pick_box">
+                            <h4><strong>코나</strong> 1.6가솔린</h4>
+                            <div>
+                                <a href="#">
+                                    <i>1</i>
+                                    <img src="./img/KU27_3.png" title="금호" alt="금호">
+                                    <p class="name">금호</p>
+                                    <p class="number">엑스타 LX KU27</p>
+                                    <div class="star">
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <i>2</i>
+                                    <img src="./img/CP672_3.png" title="넉센" alt="넉센">
+                                    <p class="name">넉센</p>
+                                    <p class="number">CP672</p>
+                                    <div class="star">
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <i>3</i>
+                                    <img src="./img/AH5_3.png" title="넉센" alt="넉센">
+                                    <p class="name">넉센</p>
+                                    <p class="number">엔프리즈 AH5</p>
+                                    <div class="star">
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                        <span class="star100"></span>
+                                        <span class="star0"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car_img02"></div>
+                    <div class="wrap">
+                        <p class="list_number">2/2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pick_btn">
+                <div class="proprev"></div>
+                <div class="pronext"></div>
+            </div>
+            <!-- //내 차에 맞는 타이어 PICK -->
+        </section>
+        <section id="skip02" class="buy">
+            <div class="wrap">
+                <!-- 타이어픽에서 타이어 사는 법! -->
+                <h3>타이어픽에서 <span>타이어 사는 법!</span></h3>
+                <p>믿을 수 있는 장착점 스피드메이트와 함께</p>
+                <article class="buy_box clear">
+                    <div>
+                        <i>STEP 01</i>
+                        <p>타이어픽에서<br>타이어<span>PICK!</span></p>
+                    </div>
+                    <div>
+                        <i>STEP 02</i>
+                        <p>장착일 &amp; 장착점<br><span>선택 및 결제</span></p>
+                    </div>
+                    <div>
+                        <i>STEP 03</i>
+                        <p><span>해피콜</span>을 통해<br>예약 확인</p>
+                    </div>
+                    <div>
+                        <i>STEP 04</i>
+                        <p>지정한 장착점으로<br>타이어 <span>무료 배송</span></p>
+                    </div>
+                    <div>
+                        <i>STEP 05</i>
+                        <p>예약한 날짜에 방문하면<br>타이어 <span>무료 장착</span></p>
+                    </div>
+                </article>
+                <!-- //타이어픽에서 타이어 사는 법! -->
+            </div>
+        </section>
+        <section id="skip03" class="sale">
+            <div class="wrap">
+                <!-- 반짝 특가 상품 -->
+                <h3><span>반짝 특가</span> 상품을<br>놓치지 마세요!</h3>
+                <article class="sale_box clear">
+                    <div>
+                        <a href="#">
+                            <img src="img/CP672_1.png" title="넥센" alt="넥센">
+                            <div class="contents">
+                                <p class="name">넥센</p>
+                                <p class="number">CP672</p>
+                                <p class="info">215/55R17</p>
+                                <p class="sale">78,900원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="img/CP672_1.png" title="넥센" alt="넥센">
+                            <div class="contents">
+                                <p class="name">넥센</p>
+                                <p class="number">CP672</p>
+                                <p class="info">215/45R17</p>
+                                <p class="sale">79,200원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="img/KU27_1.png" title="금호" alt="금호">
+                            <div class="contents">
+                                <p class="name">금호</p>
+                                <p class="number">엑스타 LX KU27</p>
+                                <p class="info">205/55R16</p>
+                                <p class="sale">74,900원</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="img/KU27_1.png" title="금호" alt="금호">
+                            <div class="contents">
+                                <p class="name">금호</p>
+                                <p class="number">엑스타 LX KU27</p>
+                                <p class="info">205/55R17</p>
+                                <p class="sale">87,000원</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+                <!-- //반짝 특가 상품 -->
+                <article class="banner clear">
+                    <!-- 배너 리스트-->
+                    <div class="banner_left">
+                        <a href="#">
+                            <p class="title">
+                                고민타파 서비스
+                            </p>
+                            <p class="dese">
+                                타이어 구매, 장착, 관리<br>
+                                스마트하게 해결하세요.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="banner_right">
+                        <a href="#">
+                            <p class="title">
+                                제휴 혜택
+                            </p>
+                            <p class="dese">
+                                타이어픽만의 제휴 카드 할인을<br>
+                                확인하세요!
+                            </p>
+                        </a>
+                    </div>
+                    <!-- //배너 리스트-->
+                </article>
+            </div>
+        </section>
+        <section id="skip04" class="review">
+            <div class="wrap clear">
+                <!-- 구매후기 -->
+                <h3>고객님의 소중한<br><span>구매후기</span> 입니다.</h3>
+                <div class="review_slide">
+                    <div>
+                        <div class="review_box">
+                           <div class="male01"></div>
+                            <div class="review_top">
+                                <p class="name">박*오</p>
+                                <div class="star">
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                    <span class="star0"></span>
+                                </div>
+                            </div>
+                            <div class="review_bottom">
+                                <p class="review_story">가격대비 성능에 만족합니다. 할인쿠폰 적용하여 저렴하게 구매했어요</p>
+                                <p class="list_name">넥센 CP672/투산TL</p>
+                            </div>
+                        </div>
+                        <div class="review_box">
+                            <div class="female"></div>
+                            <div class="review_top">
+                                <p class="name">김*춘</p>
+                                <div class="star">
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                </div>
+                            </div>
+                            <div class="review_bottom">
+                                <p class="review_story">잘해주시고 오래 기다린다고 대차까지 해 주셔서 편안하게 이용했습니다. 감사합니다.</p>
+                                <p class="list_name">스피드메이트 동광양점 / NF쏘나타</p>
+                            </div>
+                        </div>
+                        <div class="review_box">
+                           <div class="male02"></div>
+                            <div class="review_top">
+                                <p class="name">유*길</p>
+                                <div class="star">
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                </div>
+                            </div>
+                            <div class="review_bottom">
+                                <p class="review_story">주행 소음이 전 타이어 보다 조금 더 있네요~ 그러나 저렴한 제품에 만족 합니다.</p>
+                                <p class="list_name">넥센 CP672 / SM5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="review_box">
+                            <div class="female"></div>
+                            <div class="review_top">
+                                <p class="name">박*오</p>
+                                <div class="star">
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                    <span class="star0"></span>
+                                </div>
+                            </div>
+                            <div class="review_bottom">
+                                <p class="review_story">가격대비 성능에 만족합니다. 할인쿠폰 적용하여 저렴하게 구매했어요</p>
+                                <p class="list_name">넥센 CP672/투산TL</p>
+                            </div>
+                        </div>
+                        <div class="review_box">
+                           <div class="male01"></div>
+                            <div class="review_top">
+                                <p class="name">김*춘</p>
+                                <div class="star">
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                    <span class="star100"></span>
+                                </div>
+                            </div>
+                            <div class="review_bottom">
+                                <p class="review_story">잘해주시고 오래 기다린다고 대차까지 해 주셔서 편안하게 이용했습니다. 감사합니다.</p>
+                                <p class="list_name">스피드메이트 동광양점 / NF쏘나타</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //구매후기 -->
+            </div>
+        </section>
+        <section id="skip05" class="store">
+            <div class="wrap">
+                <!-- 타이어픽의 장착점 -->
+                <h3>타이어픽의 믿음직한<br><span>장착점</span>을 확인해보세요!</h3>
+                <div class="store_slide">
+                    <div>
+                        <a href="#">
+                        <div class="owner">
+                            <img src="img/S121.jpg" title="오너이미지01" alt="오너이미지01">
+                        </div>
+                        <div class="owner_list">
+                            <h4>이마트의 의정부점에 맡겨주세요. 고객님의 걱정까지 덜어드립니다.</h4>
+                            <div class="star">
+                                <span class="star100"></span>
+                                <span class="star100"></span>
+                                <span class="star100"></span>
+                                <span class="star100"></span>
+                                <span class="star100"></span>
+                            </div>
+                            <p class="store_name"><i class="fas fa-map-marker-alt"></i> 스피드메이트 이마트 의정부점</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                        <div class="owner">
+                            <img src="img/S524.jpg" title="오너이미지02" alt="오너이미지02">
+                        </div>
+                        <div class="owner_list">
+                            <h4>이마트의 의정부점에 맡겨주세요. 고객님의 걱정까지 덜어드립니다.</h4>
+                            <div class="star">
+                                <span class="star100"></span>
+                                <span class="star100"></span>
+                                <span class="star100"></span>
+                                <span class="star100"></span>
+                                <span class="star100"></span>
+                            </div>
+                            <p class="store_name"><i class="fas fa-map-marker-alt"></i> 스피드메이트 이마트 의정부점</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                        <div class="owner">
+                            <img src="img/S642.jpg" title="오너이미지03" alt="오너이미지03">
+                        </div>
+                        <div class="owner_list">
+                            <h4>이마트의 의정부점에 맡겨주세요. 고객님의 걱정까지 덜어드립니다.</h4>
+                            <div class="star">
+                                <span class="star100"></span>
+                                <span class="star100"></span>
+                                <span class="star100"></span>
+                                <span class="star100"></span>
+                                <span class="star100"></span>
+                            </div>
+                            <p class="store_name"><i class="fas fa-map-marker-alt"></i> 스피드메이트 이마트 의정부점</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- //타이어픽의 장착점 -->
+            </div>
+        </section>
+        <section id="skip06" class="event">
+            <div class="wrap">
+                <!-- 이벤트 -->
+                <h3>이벤트</h3>
+                <div class="event_list clear">
+                    <div>
+                        <a href="#">
+                            <p class="event_name">L.PAY로 7만원<br>이상 결제 시 5000포인트 지급</p>
+                            <p class="event_time">2019.07.10~2019.08.31</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p class="event_name">타이어 사면<br>Most 주유비<br>3천원 지원</p>
+                            <p class="event_time">2019.07.29~2019.08.31</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p class="event_name">타이어픽 오픈 기념!<br>2,000원 할인 쿠폰<br>증정</p>
+                            <p class="event_time">2019.07.22~소진 시까지</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- //이벤트 -->
+            </div>
+        </section>
+        <!-- //메인 내용 -->
+    </main>
+    <footer id="footer">
+        <!-- 하단 내용 -->
+        <div class="quick">
+            <!-- 퀵메뉴-->
+            <ul>
+                <li class="quick_talk"><a href="#">상담하러 가기</a></li>
+                <li class="quick_top"><a href="#">상단으로 이동</a></li>
+            </ul>
+            <!-- //퀵메뉴 -->
+        </div>
+        <div class="ft_top">
+            <div class="wrap">
+                <!-- 하단 상단 내용 -->
+                <h3>이용약관</h3>
+                <ul class="clear">
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#"><strong>개인정보 처리방침</strong></a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                </ul>
+                <!-- //하단 상단 내용 -->
+            </div>
+        </div>
+        <div class="ft_main">
+            <div class="wrap">
+                <!-- 하단 메인 내용 -->
+                <h3>회사정보</h3>
+                <ul class="clear">
+                    <li>SK네트웍스(주)</li>
+                    <li>서울특별시 중구 남대문로 90</li>
+                    <li>대표이사 : 최신원 박상규</li>
+                    <li>사업자번호 : 124-81-00718</li>
+                </ul>
+                <p>통신판매업신고 : 제2019-서울중구-1025호</p>
+                <p>이메일 : <a href="email:cs@tire-pick.com">cs@tire-pick.com</a>
+                    고객센터 : <i><a href="tel:1600-7013">1600-7013</a></i> (평일09~18시)</p>
+                <!-- //하단 메인 내용 -->
+            </div>
+        </div>
+        <div class="ft_bottom">
+            <div class="wrap">
+                <!-- 하단 하단 내용 -->
+                <h3>카피라이트</h3>
+                <address>Copyright (C) TIREPICK. All rights reserved.</address>
+                <!-- //하단 하단 내용 -->
+            </div>
+        </div>
+        <!-- //하단 내용 -->
+    </footer>
+</body>
+</html>
