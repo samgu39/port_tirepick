@@ -329,6 +329,7 @@ address {font-style: normal;}
 .buy.on h3 span:before {width: 100%;}
 .buy p {padding:25px 0; text-align:center; font-size: 20px; color: #666; font-weight: bold;}
 .buy .buy_box {width: 100%; height: 268px;}
+.buy .buy_box h4 {width: 0;height: 0; font-size: 0;}
 .buy .buy_box > div {position: relative; float: left; width: 20%; height: 268px;}
 .buy .buy_box > div:before {content: ''; display: block; position: absolute; left:200px; top:100px; width: 0; height: 1px; background: #d4d4d4; transition: all .3s;}
 .buy.on .buy_box > div:before {width: 80px;}
@@ -353,6 +354,7 @@ address {font-style: normal;}
 .sale h3 span:before {content: ''; position: absolute; left:0; bottom:0; background: #ffbf0b; width: 0; height: 12px; z-index: -1; transition: all .3s;}
 .sale.on h3 span:before {width: 100%;}
 .sale .sale_box {position: relative; right: -200%; width: 100%; height: 445px; transition: all .6s;}
+.sale .sale_box h4 {width: 0; height: 0; font-size: 0;}
 .sale.on .sale_box {right: 0;}
 .sale .sale_box > div {float:left; width: 25%; height: 385px; padding: 10px; box-sizing: border-box; margin-bottom: 60px;}
 .sale .sale_box > div:first-child {padding-left: 0;}
@@ -367,6 +369,7 @@ address {font-style: normal;}
 
 /* sale banner */
 .sale .banner {width: 100%; height: 192px;}
+.sale .banner h4 {width: 0; height: 0; font-size: 0;}
 .sale .banner .banner_left {float:left; width: 50%; height: 100%; background: #192649 url(../img/banner_01.png) no-repeat right 90px center; padding: 47px 60px; box-sizing: border-box;}
 .sale .banner .banner_right {float:right; width: 50%; height: 100%; background: #c626d5 url(../img/banner_02.png) no-repeat right 52px center; padding: 47px 60px; box-sizing: border-box;}
 .sale .banner > div > a {display: block; width: 100%; height: 100%;}
