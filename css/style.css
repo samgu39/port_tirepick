@@ -169,7 +169,7 @@ address {font-style: normal;}
 #main .slide .slide_box > div .img_back {position: absolute; left:0; top:0; z-index: 1;}
 #main .slide .slide_box > div a {display: inline-block; position: relative; left:435px; top: 464px; width: 171px; height: 71px; border-radius: 40px; z-index: 3; overflow: hidden;}
 #main .slide .slide_box > div a p {position: absolute; top:0; padding: 24px 40px; font-size: 20px; color: #fff; background: #192649; transition: all .3s;}
-#main .slide .slide_box > div a:before {content: attr(title-name); display: block; width: 100%; height: 100%; position: absolute; left:0; bottom:-71px; padding: 24px 40px; font-size: 20px; color: #fff; background: #192649; transition: all .3s;}
+#main .slide .slide_box > div a:before {content: '자세히보기'; display: block; width: 100%; height: 100%; position: absolute; left:0; bottom:-71px; padding: 24px 40px; font-size: 20px; color: #fff; background: #192649; transition: all .3s;}
 #main .slide .slide_box > div a:hover p {top:-71px;}
 #main .slide .slide_box > div a:hover:before {bottom: 0;}
 
