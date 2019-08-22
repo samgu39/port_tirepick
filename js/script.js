@@ -1,351 +1,289 @@
-window.onload = function(){
-    // 페이지가 로딩이 완료된 후 스크립트를 실행
-    var portBox = document.querySelector('.portfolio_popup');
-    var portBtn = portBox.querySelector('.portfolio_popup_close a');
+$(document).ready(function(){
     
-    portBtn.addEventListener("click", portNone);
+    setTimeout(function(){
+        
+        $('html, body').animate({ scrollTop : 0 },500);
+        contents.eq(0).addClass('active');
+        
+    }, 300);
     
-    function portNone(e){
+    // 새로 고침시 자동으로 상단으로 올라가는 스크립트
+    
+    var skip = $('#skip');
+    var skipNav = $('#skip ul li')
+    
+    skip.focusin(function(){
+        $(this).addClass('on');
+    });
+    
+    skipNav.focusin(function(){
+        $(this).addClass('on').siblings().removeClass('on');
+    });
+    skipNav.focusout(function(){
+        $(this).removeClass('on');
+    });
+    
+    // tab 버튼 클릭 시 skip 메뉴 활성화
+    
+    var popupPortClose = $('.portfolio_popup .portfolio_popup_close a');
+    var popupPort = $('.portfolio_popup');
+    
+    popupPortClose.click(function(e){
         e.preventDefault();
         
-        portBox.style.display = 'none';
-    };
+        popupPort.hide(800);
+    });
     
-    // 포트폴리오 팝업창 닫기
+    // 포트폴리오 홈페이지 명시 팝업창 닫기 스크립트
     
-    var popup = document.querySelector('.popup');
-    var closeBtn = popup.querySelector('.popup_close .close');
-    var todayBtn = document.querySelector('.popup_close .today');
-    var todayLabel = document.querySelector('.popup_close .today_none');
-    
-    closeBtn.addEventListener("click",popupNone);
-    
-    function popupNone(e){
-        var dim = document.querySelector('.dim');
-        e.preventDefault();
-        
-        popup.style.display = 'none';
-        dim.style.display = 'none';
-        html.style.overflowY = "scroll";
-    };
-    
-    // popup창 닫기를 누를 시 dim, popup창 해제 및 oveflow scroll로 바꿈
-    
-    var html = document.documentElement;
-    var dim = document.querySelector('.dim');
-    
-    if (dim = dim.className = 'dim'){
-        html.style.overflowY = "hidden"
-    }
-    
-    // dim 활성화시 body에 overflow hidden 적용
-    
-    todayBtn.addEventListener("click",today);
-    
-    function today() {
-        var day = false;
-        
-        if (todayBtn.checked) {
-            day = true;
-        } else {
-            day = false;
-        }
-        
-        //console.log(day);
-        
-        if (day == true){
-            todayLabel.classList.add('checked');
-        } else{
-            todayLabel.classList.remove('checked');
-        };
-    };
-    
-    /*var hd = document.getElementById('head');
-    var nav = document.querySelector('.gnb ul li');
-    var subNav = document.querySelector('.submenu');
-    var subNavBox = document.querySelector('.submenu_back');
-    
-    nav.addEventListener('mouseover',navSlide);
-    
-    function navSlide() {
-        
-      hd.style.background = '#fff';
-      subNav.classList.add('on');
-      subNavBox.classList.add('on');
-    };
-    
-    for (var i = 0 ; i < nav.length; i++){
-        nav[i].addEventListener('mouseover',navSlide);
-        
-        function navSlide() {
-          
-          hd.style.background = '#fff';
-          subNav.classList.add('on');
-          subNavBox.classList.add('on');
-        };
-    
-    };
-    
-    nav.addEventListener('mouseover',navSlide);
-    
-    function navSlide() {
-      hd.style.background = '#fff';
-      subNav.classList.add('on');
-      subNavBox.classList.add('on');
-    };
-    */
-    
-    // 대메뉴 슬라이드 다운/업 스크립트 (수정중)
-    
-    var hd = $('#head');
-    var nav = $('#head .hd .gnb ul li');
-    var subNav = $('.submenu');
-    var subNavBox = $('#head .submenu_back');
+    var nav = $('#container #header .nav ul li');
+    var navBox = $('#container #header .nav .bar');
+    var contents = $('#container #contents > section');
     
     nav.mouseover(function(){
-        hd.css({"background":"#fff"});
-        subNav.stop().slideDown();
-        subNavBox.stop().slideDown();
+        var navck = $(this);
+        
+        navBox.css({ left : $(this).position().left, width : $(this).width() });
+        navck.addClass('active').siblings().removeClass('active');
+        
     });
     
-    nav.mouseleave(function(){
-        hd.css({"background":"none"});
-        subNav.stop().slideUp();
-        subNavBox.stop().slideUp();
+    // 네비 박스 따라다니는 스크립트
+    
+    nav.click(function(e){
+        e.preventDefault();
+        
+        var navClick = $(this);
+        var navIdx = navClick.index();
+        //console.log(navidx);
+        var section = contents.eq(navIdx);
+        var offset = section.offset().top;
+        //console.log(offset);
+        
+        $('html, body').animate({ scrollTop : offset },500);
     });
     
-    // 대메뉴 슬라이드 다운/업 스크립트 (제이쿼리)
+    // 메뉴 클릭 시 해당 div 위치로 이동하는 스크립트
     
-    $('.slide_box').bxSlider({
-          controls: false,
-          auto: true,
-          autoControls: true,
-          pager: true,
-      });
-    
-    // 슬라이드 메뉴 bx 슬라이드
-    
-    var slideMenu01 = document.querySelector('.slide_menu ul li .car');
-    var slideMenu02 = document.querySelector('.slide_menu ul li .size');
-    var slideMenu03 = document.querySelector('.slide_menu ul li .brand');
-    var slideMenuBox = document.querySelector('.slide_menu_popup');
-    var tabMenu01 = document.querySelector('.popup_top ul li .car');
-    var tabMenu02 = document.querySelector('.popup_top ul li .size');
-    var tabMenu03 = document.querySelector('.popup_top ul li .brand');
-    var tabBox01 = document.querySelector('.popup_bottom .popup01');
-    var tabBox02 = document.querySelector('.popup_bottom .popup02');
-    var tabBox03 = document.querySelector('.popup_bottom .popup03');
-    var dim = document.querySelector('.dim');
-    var tabCloseBtn = document.querySelector('.slide_menu_popup_close a');
-    
-    
-    slideMenu01.addEventListener("click", subpopup01);
-    slideMenu02.addEventListener("click", subpopup02);
-    slideMenu03.addEventListener("click", subpopup03);
-    tabMenu01.addEventListener("click", subpopup01);
-    tabMenu02.addEventListener("click", subpopup02);
-    tabMenu03.addEventListener("click", subpopup03);
-    tabCloseBtn.addEventListener("click", popupDown);
-    
-    function subpopup01(e) {
-        e.preventDefault();
+    $(window).scroll(function(){
+        var winScroll = $(this).scrollTop();
+        var ftNav = $('#container #footer .box ul li');
         
-        slideMenuBox.style.display = 'block';
-        tabMenu01.classList.add('active');
-        tabMenu02.classList.remove('active');
-        tabMenu03.classList.remove('active');
-        tabBox01.style.display = 'block';
-        tabBox02.style.display = 'none';
-        tabBox03.style.display = 'none';
-        dim.style.display = 'block';
-        html.style.overflowY = "hidden";
-    };
-    
-    function subpopup02(e) {
-        e.preventDefault();
-        
-        slideMenuBox.style.display = 'block';
-        tabMenu02.classList.add('active');
-        tabMenu01.classList.remove('active');
-        tabMenu03.classList.remove('active');
-        tabBox02.style.display = 'block';
-        tabBox01.style.display = 'none';
-        tabBox03.style.display = 'none';
-        dim.style.display = 'block';
-        html.style.overflowY = "hidden";
-    };
-    
-    function subpopup03(e) {
-        e.preventDefault();
-        
-        slideMenuBox.style.display = 'block';
-        tabMenu03.classList.add('active');
-        tabMenu01.classList.remove('active');
-        tabMenu02.classList.remove('active');
-        tabBox03.style.display = 'block';
-        tabBox01.style.display = 'none';
-        tabBox02.style.display = 'none';
-        dim.style.display = 'block';
-        html.style.overflowY = "hidden";
-    };
-    
-    function popupDown(e){
-        e.preventDefault();
-        
-        slideMenuBox.style.display = 'none';
-        dim.style.display = 'none';
-        html.style.overflowY = "scroll";
-    };
-    
-    
-    // 슬라이트 버튼 클릭시 팝업창 띄우기
-    
-    $('.pick_slide').bxSlider({
-          pager: true,
-          nextSelector: '.pronext',
-          prevSelector: '.proprev',
-          prevText: '',   
-          nextText: '',
-          onSlideAfter: function($slideElement){
-              $('.pick').removeClass('on');
-              $slideElement.addClass('active').siblings().removeClass('active');
-          } //슬라이드 이동에 효과 추가
-      });
-    
-    // 픽 메뉴 bx 슬라이드
-    
-    $('.store_slide').bxSlider({
-          pager: true
-      });
-    
-    // 장착점 메뉴 bx 슬라이드
-    
-    var listBtn = document.querySelector('.sns_menu .list');
-    var cartBtn = document.querySelector('.sns_menu .cart');
-    var snsBox = document.querySelector('.sns_menu_box');
-    var snsBoxClose = snsBox.querySelector('.sns_menu_box_close a');
-    
-    listBtn.addEventListener("click",list);
-    cartBtn.addEventListener("click",cart);
-    snsBoxClose.addEventListener("click",popupClose);
-    
-    function list(e) {
-        e.preventDefault();
-        
-        snsBox.classList.add('on');
-        snsTabMenuCart.classList.remove('active');
-        snsTabMenuList.classList.add('active');
-        MenuListBox.style.display = 'block';
-        MenuCartBox.style.display = 'none';
-    };
-    
-    function cart(e) {
-        e.preventDefault();
-        
-        snsBox.classList.add('on');
-        snsTabMenuList.classList.remove('active');
-        snsTabMenuCart.classList.add('active');
-        MenuCartBox.style.display = 'block';
-        MenuListBox.style.display = 'none';
-    };
-    
-    function popupClose(e) {
-        e.preventDefault();
-        
-        snsBox.classList.remove('on');
-    };
-    
-    // sns 메뉴바 슬라이드 스크립트
-    
-    var snsTabMenuList = document.querySelector('.tab_menu ul .list a');
-    var snsTabMenuCart = document.querySelector('.tab_menu ul .cart a');
-    var MenuListBox = document.querySelector('.sns_menu_box_tab_box .sns_menu_box_list');
-    var MenuCartBox = document.querySelector('.sns_menu_box_tab_box .sns_menu_box_shopping');
-    
-    snsTabMenuList.addEventListener("click",tabList);
-    snsTabMenuCart.addEventListener("click",tabCart);
-    
-    function tabList(e) {
-        e.preventDefault();
-        
-        this.classList.add('active');
-        snsTabMenuCart.classList.remove('active');
-        MenuListBox.style.display = 'block';
-        MenuCartBox.style.display = 'none';
-    };
-    
-    function tabCart(e) {
-        e.preventDefault();
-        
-        this.classList.add('active');
-        snsTabMenuList.classList.remove('active');
-        MenuCartBox.style.display = 'block';
-        MenuListBox.style.display = 'none';
-    };
-        
-    // sns 탭 박스 스크립트
-    
-    var headTop = document.getElementById('head');
-    var sectionBox01 = document.getElementById('skip01').offsetTop;
-    var sectionBox02 = document.getElementById('skip02').offsetTop;
-    var sectionBox03 = document.getElementById('skip03').offsetTop;
-    var sectionBox04 = document.getElementById('skip04').offsetTop;
-    var sectionBox05 = document.getElementById('skip05').offsetTop;
-    var sectionBox06 = document.getElementById('skip06').offsetTop;
-    var topBtn = document.querySelector('.quick_top');
-    var footer = document.getElementById('footer').offsetTop - 800;
-    
-    topBtn.addEventListener("click",topSlide);
-    
-        function topSlide(e) {
-            e.preventDefault();
-        
-            window.scrollTo(0,0);
+        /*
+        if(winScroll >= contents.eq(0).offset().top){
+            contents.removeClass('active');
+            contents.eq(0).addClass('active');
+            ftNav.removeClass('active');
+            ftNav.eq(0).addClass('active');
+            nav.removeClass('active');
+            nav.eq(0).addClass('active');
+            navBox.css({ left : nav.eq(0).position().left, width : nav.eq(0).width() });
+            n = 0;
         };
-    
-    // top 버튼 클릭시 상단으로 이동
-    
-    window.addEventListener("scroll", scrollEvent);
-    
-    function scrollEvent(){
-        var scrollTop = window.pageYOffset;
+        if(winScroll >= contents.eq(1).offset().top - 300){
+            contents.eq(1).addClass('active');
+            ftNav.removeClass('active');
+            ftNav.eq(1).addClass('active');
+            nav.removeClass('active');
+            nav.eq(1).addClass('active');
+            navBox.css({ left : nav.eq(1).position().left, width : nav.eq(1).width() });
+            n = 1;
+        };
+        if(winScroll >= contents.eq(2).offset().top - 300){
+            contents.eq(2).addClass('active');
+            ftNav.removeClass('active');
+            ftNav.eq(2).addClass('active');
+            nav.removeClass('active');
+            nav.eq(2).addClass('active');
+            navBox.css({ left : nav.eq(2).position().left, width : nav.eq(2).width() });
+            n = 2;
+        };
+        if(winScroll >= contents.eq(3).offset().top - 300){
+            contents.eq(3).addClass('active');
+            ftNav.removeClass('active');
+            ftNav.eq(3).addClass('active');
+            nav.removeClass('active');
+            nav.eq(3).addClass('active');
+            navBox.css({ left : nav.eq(3).position().left, width : nav.eq(3).width() });
+            n = 3;
+        };
+        if(winScroll >= contents.eq(4).offset().top - 300){
+            contents.eq(4).addClass('active');
+            ftNav.removeClass('active');
+            ftNav.eq(4).addClass('active');
+            nav.removeClass('active');
+            nav.eq(4).addClass('active');
+            navBox.css({ left : nav.eq(4).position().left, width : nav.eq(4).width() });
+            n = 4;
+        };
+        if(winScroll >= contents.eq(5).offset().top - 300){
+            contents.eq(5).addClass('active');
+            ftNav.removeClass('active');
+            ftNav.eq(5).addClass('active');
+            nav.removeClass('active');
+            nav.eq(5).addClass('active');
+            navBox.css({ left : nav.eq(5).position().left, width : nav.eq(5).width() });
+            n = 5;
+        };
+        if(winScroll >= contents.eq(6).offset().top - 300){
+            contents.eq(6).addClass('active');
+            ftNav.removeClass('active');
+            ftNav.eq(6).addClass('active');
+            nav.removeClass('active');
+            nav.eq(6).addClass('active');
+            navBox.css({ left : nav.eq(6).position().left, width : nav.eq(6).width() });
+            n = 6;
+        };
+        */
         
-        if (scrollTop > 80) {
-            headTop.classList.add('on');
-            topBtn.classList.add('on');
-        }else {
-            headTop.classList.remove('on');
-            topBtn.classList.remove('on');
+        for(var i = 0; i < contents.length; i++){
+          if(winScroll >= contents.eq(i).offset().top){
+              contents.removeClass('active');
+              contents.eq(i).addClass('active');
+              ftNav.removeClass('active');
+              ftNav.eq(i).addClass('active');
+              nav.removeClass('active');
+              nav.eq(i).addClass('active');
+              navBox.css({ left : nav.eq(i).position().left, width : nav.eq(i).width() });
+              n = i;
+          }
+            
         };
         
-        // 상단 메뉴바 on 클래스 추가
+    });
+    
+    // div가 화면에 닿으면 active 클래스 추가, 상단 및 우측 메뉴 변동
+    
+    var n = 0;
+    var h;
+    var box = 0;
+    
+    $(window).mousewheel(function(e, delta){
+        var h = $(window).height();
         
-        if (scrollTop > footer){
-            document.querySelector('.quick').classList.add('top');
-        }else {
-            document.querySelector('.quick').classList.remove('top');
+        if ($('html, body').is(":animated")){
+            return;
         }
         
-        // 하단에 quick메뉴가 닿을 경우 top 클래스 추가
+        if(delta > 0){
+            if(n > 0){
+              n--;
+            }
+        }else{
+            if(n < 6){
+              n++;  
+            }
+        }
+        //console.log(n);
+        box= n * h;
         
-        if (scrollTop > sectionBox01 - 300) {
-            document.getElementById('skip01').classList.add('on');
-        };
-        if (scrollTop > sectionBox02 - 300) {
-            document.getElementById('skip02').classList.add('on');
-        };
-        if (scrollTop > sectionBox03 - 300) {
-            document.getElementById('skip03').classList.add('on');
-        };
-        if (scrollTop > sectionBox04 - 300) {
-            document.getElementById('skip04').classList.add('on');
-        };
-        if (scrollTop > sectionBox05 - 300) {
-            document.getElementById('skip05').classList.add('on');
-        };
-        if (scrollTop > sectionBox06 - 300) {
-            document.getElementById('skip06').classList.add('on');
-        };
-        // 스크롤값에 따른 효과 추가
+        $('html, body').animate({ scrollTop : box },800);
+    });
+    
+    // 마우스 휠 패럴랙스 효과 스크립트
+    
+    if($(window).width() > 768 ){
+        $(window).resize(function(){
+        var h = $(window).height();
+        
+        //console.log(winHeight);
+        $('#container #contents > section').css({ height : h });
+        
+        });
+
+        $(window).trigger('resize');
+    }else if($(window).width() < 768){
+        $('#contents > section').css("height","100%");
     }
-};
+    
+    // 화면의 사이즈가 변경되었을 경우 height 값을 맞춰주는 스크립트
+    
+    $(window).scroll(function(){
+        var winScroll = $(this).scrollTop();
+        
+        if(winScroll > 80) {
+            $('#container #header').addClass('on');
+        }else{
+            $('#container #header').removeClass('on');
+        };
+    });
+    
+    // 모니터 스크롤이 80을 지날 경우 메뉴에 on 클래스 추가
+    
+    $('.m_nav').click(function(){
+        $(this).toggleClass('on')
+        $('.nav').slideToggle();
+    });
+    
+    // 모바일 버전에서 메뉴버튼을 클릭시 nav가 내려오는 스크립트
+    
+    var swiper1 = new Swiper('.swiper-container01', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+    
+    // swiper 슬라이드 코드 01
+    
+    var swiper2 = new Swiper('.swiper-container02', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+    
+    // swiper 슬라이드 코드 02
+    
+    $('.cont04_left').mouseover(function(){
+        $('.cont04_left img').attr("src","./img/box04_img01_2.png");
+    });
+    
+    $('.cont04_left').mouseleave(function(){
+        $('.cont04_left img').attr("src","./img/box04_img01_1.png");
+    });
+    
+    // 이미지에 마우스가 닿을 경우 이미지 경로 변경
+    
+    var cont06 = $('#cont06 .cont06_topmenu div > div');
+    
+    cont06.click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+    
+    // 감성캠핑샵 / 키친라이프샵 중 하나를 선택할 경우 해당 div에 active 클래스 추가
+    
+    var ftNav = $('#container #footer .box ul li');
+    
+    ftNav.click(function(e){
+        e.preventDefault();
+        
+        var navClick = $(this);
+        var navIdx = navClick.index();
+        //console.log(navidx);
+        var section = contents.eq(navIdx);
+        var offset = section.offset().top;
+        //console.log(offset);
+        
+        $('html, body').animate({ scrollTop : offset },500);
+        navClick.addClass('active').siblings().removeClass('active');
+    });
+    
+    // 우측 메뉴 이동 스크립트
+    
+});
