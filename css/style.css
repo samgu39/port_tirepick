@@ -339,11 +339,11 @@ address {font-style: normal;}
 .buy.on .buy_box > div:nth-child(4):before {transition-delay: 1.4s;}
 .buy.on .buy_box > div:nth-child(5):before {transition-delay: 1.8s;}
 .buy .buy_box > div:last-child:before {display: none;}
-.buy .buy_box > div:nth-child(1) {background: url(../img/ico_step.png) no-repeat; background-position: 90px 60px; }
-.buy .buy_box > div:nth-child(2) {background: url(../img/ico_step.png) no-repeat; background-position: -150px 60px;}
-.buy .buy_box > div:nth-child(3) {background: url(../img/ico_step.png) no-repeat; background-position: -395px 60px;}
-.buy .buy_box > div:nth-child(4) {background: url(../img/ico_step.png) no-repeat; background-position: -635px 60px;}
-.buy .buy_box > div:nth-child(5) {background: url(../img/ico_step.png) no-repeat; background-position: -880px 60px;}
+.buy .buy_box > div:nth-child(2) {background: url(../img/ico_step.png) no-repeat; background-position: 90px 60px;}
+.buy .buy_box > div:nth-child(3) {background: url(../img/ico_step.png) no-repeat; background-position: -150px 60px;}
+.buy .buy_box > div:nth-child(4) {background: url(../img/ico_step.png) no-repeat; background-position: -395px 60px;}
+.buy .buy_box > div:nth-child(5) {background: url(../img/ico_step.png) no-repeat; background-position: -635px 60px;}
+.buy .buy_box > div:nth-child(6) {background: url(../img/ico_step.png) no-repeat; background-position: -880px 60px;}
 .buy .buy_box > div i {position: absolute; left:50%; bottom: 88px; transform: translateX(-50%); display: block; text-align: center; font-style: normal; font-size: 15px; color: #666; font-weight: bold;}
 .buy .buy_box > div p {display: block; width: 100%; position: absolute; left:50%; bottom: 33px; transform: translateX(-50%); padding: 0; color: #000; font-weight: normal; font-size: 19px;}
 .buy .buy_box > div p span {font-weight: bold;}
