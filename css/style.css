@@ -93,18 +93,19 @@ address {font-style: normal;}
 #head.on .hd .gnb ul li {height: 84px;}
 #head .hd .gnb ul li a {display: block; width: 100%; height: 100%; font-weight: bold; font-size: 18px; text-align: center; line-height: 104px; transition: all .3s;}
 #head .hd .gnb ul li:hover a {color: #c626d5;}
-#head .hd .gnb ul li ul {display: none; position: absolute; height: 276px; border-right: 1px solid #e6e6ed; z-index: 99;}
-#head .hd .gnb ul li ul.on {display: block;}
+#head .hd .gnb ul li ul {position: absolute; height: 0; border-right: 1px solid #e6e6ed; z-index: 99; transition: all .3s;}
+#head .hd .gnb ul.on li ul {height: 276px;}
 #head .hd .gnb ul li ul.first {border-left: 1px solid #e6e6ed;}
-#head .hd .gnb ul li ul li {width: 140px; height: 39px;}
+#head .hd .gnb ul li ul li {opacity: 0; width: 140px; height: 39px; transition: all .3s;}
+#head .hd .gnb ul.on li ul li {opacity: 1;}
 #head.on .hd .gnb ul li ul li {height: 39px;}
 #head .hd .gnb ul li ul li a {display: block; width: 100%; height: 100%; font-weight: normal; font-size: 15px; text-align: center; line-height: 39px; }
 #head .hd .gnb ul li ul li a:first-child {margin-top:10px;}
 #head .hd .gnb ul li ul li a:hover {font-weight: bold;}
 #head .hd .gnb ul li:hover ul li a {color: #000;}
 
-#head .submenu_back {display: none; position: absolute; width: 100%; height: 276px; background: #fff; box-shadow: 3px 3px 6px rgba(0,0,0,0.2);}
-#head .submenu_back.on {display: block;}
+#head .submenu_back {position: absolute; width: 100%; height: 0; background: #fff; box-shadow: 3px 3px 6px rgba(0,0,0,0.2); transition: all .3s;}
+#head .submenu_back.on {height: 276px;}
 #head .submenu_back .subhd {position: relative; height: 276px;}
 #head .submenu_back .subhd h3 {font-size: 20px; padding-top: 40px;}
 #head .submenu_back .subhd .submenu_back_left_img {margin-top:23px; width: 210px; height: 114px; background: url(../img/banner.png) no-repeat;}
@@ -176,8 +177,8 @@ address {font-style: normal;}
 /* slider */
 #main .slide .bx-wrapper {width: 100%; height: 684px; border:none; box-shadow: none;}
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {position: absolute; right: 355px;}
-.bx-wrapper .bx-controls-auto .bx-start {display: none; position: relative; left:15px; bottom:-17px; background: #fff url(../img/ico_sp.png) no-repeat; background-position: -15px -100px !important; padding: 15px; border-radius: 50%; z-index: 1;}
-.bx-wrapper .bx-controls-auto .bx-stop {display: none; position: relative; left:15px; background: #fff url(../img/ico_sp.png) no-repeat; background-position: -35px -100px !important; padding: 15px; border-radius: 50%; z-index: 1;}
+.bx-wrapper .bx-controls-auto .bx-start {position: relative; left: 15px; bottom:0; background: #fff url(../img/ico_sp.png) no-repeat; background-position: -15px -100px !important; padding: 15px; border-radius: 50%; z-index: 1;}
+.bx-wrapper .bx-controls-auto .bx-stop {position: relative; left: 15px; background: #fff url(../img/ico_sp.png) no-repeat; background-position: -35px -100px !important; padding: 15px; border-radius: 50%; z-index: 1;}
 .bx-wrapper .bx-controls-auto .bx-start.active {display: block; z-index: 0;}
 .bx-wrapper .bx-controls-auto .bx-stop.active {display: block; z-index: 0;}
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {position: absolute; right: 390px; bottom:-20px; width: 80px;}
