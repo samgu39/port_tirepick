@@ -62,67 +62,34 @@ window.onload = function(){
     
     // 체크박스 클릭시 checked 클래스 추가/삭제 스크립트
     
-    /*var hd = document.getElementById('head');
-    var nav = document.querySelector('.gnb ul li');
-    var subNav = document.querySelector('.submenu');
+    var hd = document.getElementById('head');
+    var nav = document.querySelector('.gnb ul');
     var subNavBox = document.querySelector('.submenu_back');
     
     nav.addEventListener('mouseover',navSlide);
     
-    function navSlide() {
-        
-      hd.style.background = '#fff';
-      subNav.classList.add('on');
-      subNavBox.classList.add('on');
-    };
-    
-    for (var i = 0 ; i < nav.length; i++){
-        nav[i].addEventListener('mouseover',navSlide);
-        
         function navSlide() {
-          
           hd.style.background = '#fff';
-          subNav.classList.add('on');
+          this.classList.add('on');
           subNavBox.classList.add('on');
         };
+        
+    nav.addEventListener('mouseleave',navSlideClose);
     
-    };
+        function navSlideClose() {
+          hd.style.background = 'none';
+          this.classList.remove('on');
+          subNavBox.classList.remove('on');
+        };
     
-    nav.addEventListener('mouseover',navSlide);
-    
-    function navSlide() {
-      hd.style.background = '#fff';
-      subNav.classList.add('on');
-      subNavBox.classList.add('on');
-    };
-    */
-    
-    // 대메뉴 슬라이드 다운/업 스크립트 (수정중)
-    
-    var hd = $('#head');
-    var nav = $('#head .hd .gnb ul li');
-    var subNav = $('.submenu');
-    var subNavBox = $('#head .submenu_back');
-    
-    nav.mouseover(function(){
-        hd.css({"background":"#fff"});
-        subNav.stop().slideDown();
-        subNavBox.stop().slideDown();
-    });
-    
-    nav.mouseleave(function(){
-        hd.css({"background":"none"});
-        subNav.stop().slideUp();
-        subNavBox.stop().slideUp();
-    });
-    
-    // 대메뉴 슬라이드 다운/업 스크립트 (제이쿼리)
+    // 대메뉴 슬라이드 다운/업 스크립트
     
     $('.slide_box').bxSlider({
           controls: false,
           auto: true,
           autoControls: true,
           pager: true,
+          autoControlsCombine: true,
       });
     
     // 슬라이드 메뉴 bx 슬라이드
