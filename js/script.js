@@ -189,6 +189,13 @@ window.onload = function(){
     
     // 장착점 메뉴 bx 슬라이드
     
+    $('.review_slide').bxSlider({
+          pager: true,
+          pagerType: 'short',
+      });
+    
+    //
+    
     var listBtn = document.querySelector('.sns_menu .list');
     var cartBtn = document.querySelector('.sns_menu .cart');
     var snsBox = document.querySelector('.sns_menu_box');
