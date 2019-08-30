@@ -106,7 +106,8 @@ address {font-style: normal;}
 
 #head .submenu_back {position: absolute; width: 100%; height: 0; background: #fff; box-shadow: 3px 3px 6px rgba(0,0,0,0.2); transition: all .3s;}
 #head .submenu_back.on {height: 276px;}
-#head .submenu_back .subhd {position: relative; height: 276px;}
+#head .submenu_back .subhd {opacity: 0; position: relative; height: 276px; transition: all .3s;}
+#head .submenu_back.on .subhd {opacity: 1;}
 #head .submenu_back .subhd h3 {font-size: 20px; padding-top: 40px;}
 #head .submenu_back .subhd .submenu_back_left_img {margin-top:23px; width: 210px; height: 114px; background: url(../img/banner.png) no-repeat;}
 #head .submenu_back .subhd .submenu_back_right_img {position: absolute; left:180px; top:60px; width: 37px; height: 64px; background: url(../img/banner_obj.png) no-repeat; animation: ani01 2s infinite;}
@@ -176,14 +177,15 @@ address {font-style: normal;}
 
 /* slider */
 #main .slide .bx-wrapper {width: 100%; height: 684px; border:none; box-shadow: none;}
-.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {position: absolute; right: 355px;}
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {position: absolute; right: 0;}
 .bx-wrapper .bx-controls-auto .bx-start {position: relative; left: 15px; bottom:0; background: #fff url(../img/ico_sp.png) no-repeat; background-position: -15px -100px !important; padding: 15px; border-radius: 50%; z-index: 1;}
 .bx-wrapper .bx-controls-auto .bx-stop {position: relative; left: 15px; background: #fff url(../img/ico_sp.png) no-repeat; background-position: -35px -100px !important; padding: 15px; border-radius: 50%; z-index: 1;}
 .bx-wrapper .bx-controls-auto .bx-start.active {display: block; z-index: 0;}
 .bx-wrapper .bx-controls-auto .bx-stop.active {display: block; z-index: 0;}
-.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {position: absolute; right: 390px; bottom:-20px; width: 80px;}
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {position: absolute; right: 40px; bottom:-20px; width: 80px;}
 .bx-wrapper .bx-pager.bx-default-pager a {background: transparent; border:2px solid #192649;}
 .bx-wrapper .bx-pager.bx-default-pager a.active {background: #192649;}
+.slide_list .bx-controls {position: absolute; min-width: 1200px; height: 100%; top: 0; left: 50%; transform: translateX(-50%);}
 
 /* 슬라이드 메뉴 */
 #main .slide .slide_menu {position: absolute; left:50%; bottom:70px; transform: translateX(-50%); width: 760px; height: 68px; background: #fff; border-radius: 30px; box-shadow: 0 0 12px rgba(0,0,0,0.1); }
