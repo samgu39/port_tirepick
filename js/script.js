@@ -194,7 +194,7 @@ window.onload = function(){
           pagerType: 'short',
       });
     
-    //
+    // 구매후기 리뷰 슬라이드
     
     var listBtn = document.querySelector('.sns_menu .list');
     var cartBtn = document.querySelector('.sns_menu .cart');
