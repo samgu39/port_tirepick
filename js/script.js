@@ -273,12 +273,24 @@ window.onload = function(){
     
     topBtn.addEventListener("click",topSlide);
     
-        function topSlide(e) {
-            e.preventDefault();
+    function topSlide(e) {
+        e.preventDefault();
         
-            window.scrollTo(0,0);
-        };
+        scrollTopMove();
+    };
     
+    function scrollTopMove(){
+            
+        var scrollMove = setInterval(function(){
+            var scrollTop = window.pageYOffset;
+            
+            if(scrollTop != 0){
+               window.scrollBy(0,-55);
+               }else{
+               clearInterval(scrollMove);
+               }
+        },15);
+    };
     // top 버튼 클릭시 상단으로 이동
     
     window.addEventListener("scroll", scrollEvent);
