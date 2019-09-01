@@ -179,8 +179,8 @@ address {font-style: normal;}
 /* slider */
 #main .slide .bx-wrapper {width: 100%; height: 684px; border:none; box-shadow: none;}
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {position: absolute; right: 0;}
-.bx-wrapper .bx-controls-auto .bx-start {position: relative; left: 15px; bottom:0; background: #fff url(../img/ico_sp.png) no-repeat; background-position: -15px -100px !important; padding: 15px; border-radius: 50%; z-index: 1;}
-.bx-wrapper .bx-controls-auto .bx-stop {position: relative; left: 15px; background: #fff url(../img/ico_sp.png) no-repeat; background-position: -35px -100px !important; padding: 15px; border-radius: 50%; z-index: 1;}
+.bx-wrapper .bx-controls-auto .bx-start {position: relative; left: 15px; bottom:0; background: #fff url(../img/ico_sp.png) no-repeat; background-position: -35px -100px !important; padding: 15px; border-radius: 50%; z-index: 1;}
+.bx-wrapper .bx-controls-auto .bx-stop {position: relative; left: 15px; background: #fff url(../img/ico_sp.png) no-repeat; background-position: -15px -100px !important; padding: 15px; border-radius: 50%; z-index: 1;}
 .bx-wrapper .bx-controls-auto .bx-start.active {display: block; z-index: 0;}
 .bx-wrapper .bx-controls-auto .bx-stop.active {display: block; z-index: 0;}
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {position: absolute; right: 40px; bottom:-20px; width: 80px;}
