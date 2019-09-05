@@ -184,14 +184,22 @@ window.onload = function(){
     // 픽 메뉴 bx 슬라이드
     
     $('.store_slide').bxSlider({
-          pager: true
+          pager: true,
+          randomStart: true,
       });
     
     // 장착점 메뉴 bx 슬라이드
     
     $('.review_slide').bxSlider({
+          mode: 'fade',
           pager: true,
           pagerType: 'short',
+          onSliderLoad: function(currentIndex){
+              $('.review_slide > div').eq(currentIndex).addClass('active');
+          }, //슬라이드가 로드되었을 때 효과 추가
+          onSlideAfter: function($slideElement){
+              $slideElement.addClass('active').siblings().removeClass('active');
+          } //슬라이드 이동에 효과 추가
       });
     
     // 구매후기 리뷰 슬라이드
