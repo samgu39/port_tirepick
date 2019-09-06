@@ -268,6 +268,18 @@ window.onload = function(){
     };
         
     // sns 탭 박스 스크립트
+	
+	mCustomScrollBar();
+	
+	function mCustomScrollBar() {
+		$(".slide_menu_popup .popup_bottom .popup01 .search_box").mCustomScrollbar({
+					scrollButtons:{enable:true},
+					theme:"light-thick",
+					scrollbarPosition:"outside"
+				});
+	}
+	
+	// 스크롤바 플러그인
     
     var headTop = document.getElementById('head');
     var sectionBox01 = document.getElementById('skip01').offsetTop;
