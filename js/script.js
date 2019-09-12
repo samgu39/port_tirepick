@@ -33,8 +33,8 @@ window.onload = function(){
     var html = document.documentElement;
     var dim = document.querySelector('.dim');
     
-    if (dim = dim.className = 'dim'){
-        html.style.overflowY = "hidden"
+    if (dim.className = 'dim'){
+        html.style.overflowY = "hidden";
     }
     
     // dim 활성화시 body에 overflow hidden 적용
