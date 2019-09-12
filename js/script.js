@@ -97,7 +97,7 @@ window.onload = function(){
 		} return value;
 	}
 	
-	//
+	// 오늘 하루 팝업창 열지 않기 체크시 팝업창 띄워주지 않기
     
     var hd = document.getElementById('head');
     var nav = document.querySelector('.gnb ul');
