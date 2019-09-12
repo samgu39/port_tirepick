@@ -62,6 +62,30 @@ window.onload = function(){
     };
     
     // 체크박스 클릭시 checked 클래스 추가/삭제 스크립트
+	
+	function setCookieMobile ( name, value, expiredays ) {
+		var todayDate = new Date();
+		todayDate.setDate( todayDate.getDate() + expiredays );
+		document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+	}
+	
+	function getCookieMobile () {
+		var cookiedata = document.cookie;
+		var dim = document.querySelector('.dim');
+		
+		if ( cookiedata.indexOf("todayCookier=done") < 0 ){
+			popup.style.display = 'none';
+			dim.style.display = 'none';
+			html.style.overflowY = "scroll";
+		}
+		else {
+			popup.style.display = 'block';
+			dim.style.display = 'block';
+			html.style.overflowY = "hidden";
+		}
+	}
+	
+	//
     
     var hd = document.getElementById('head');
     var nav = document.querySelector('.gnb ul');
@@ -358,19 +382,3 @@ window.onload = function(){
         // 스크롤값에 따른 효과 추가
     }
 };
-
-function setCookieMobile ( name, value, expiredays ) {
-		var todayDate = new Date();
-		todayDate.setDate( todayDate.getDate() + expiredays );
-		document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
-	}
-	
-	function getCookieMobile () {
-		var cookiedata = document.cookie;
-		if ( cookiedata.indexOf("todayCookier=done") < 0 ){
-			 console.log('done')
-		}
-		else {
-			console.log('no')
-		}
-	}
