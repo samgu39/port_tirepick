@@ -11,7 +11,7 @@ window.onload = function(){
 		var cookiedata = document.cookie;
 		var dim = document.querySelector('.dim');
 		
-		if ( GetCookie("todayCookie") == "done" < 0 ){
+		if ( cookiedata.indexOf("todayCookie") == "done" < 0 ){
 			popup.style.display = 'none';
 			dim.style.display = 'none';
 			html.style.overflowY = "scroll";
