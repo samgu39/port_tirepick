@@ -11,12 +11,14 @@ window.onload = function(){
 		var cookiedata = document.cookie;
 		var dim = document.querySelector('.dim');
 		
-		if ( cookiedata.indexOf("todayCookier=done") < 0 ){
+		if ( cookiedata.indexOf("todayCookie=done") < 0 ){
+			console.log('dd')
 			popup.style.display = 'none';
 			dim.style.display = 'none';
 			html.style.overflowY = "scroll";
 		}
 		else {
+			console.log('ss')
 			popup.style.display = 'block';
 			dim.style.display = 'block';
 			html.style.overflowY = "hidden";
