@@ -365,7 +365,7 @@ address {font-style: normal;}
 .sale .sale_box h4 {width: 0; height: 0; font-size: 0;}
 .sale.on .sale_box {right: 0;}
 .sale .sale_box > div {float:left; width: 25%; height: 385px; padding: 10px; box-sizing: border-box; margin-bottom: 60px;}
-.sale .sale_box > div:first-child {padding-left: 0;}
+.sale .sale_box > div:nth-child(2) {padding-left: 0;}
 .sale .sale_box > div:last-child {padding-right: 0;}
 .sale .sale_box > div a {position: relative; display: block; width: 100%; height: 100%;}
 .sale .sale_box > div a img {position: absolute; top:0; left:50%; transform: translateX(-50%); width: 200px; height: 185px; z-index: 1;}
