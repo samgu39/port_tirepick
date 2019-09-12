@@ -68,7 +68,7 @@ window.onload = function(){
         html.style.overflowY = "scroll";
 	}else{
         popup.style.display = 'block';
-
+        dim.style.display = 'block';
         html.style.overflowY = "hidden";
 	}
 
