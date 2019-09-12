@@ -1,27 +1,22 @@
 window.onload = function(){
     // 페이지가 로딩이 완료된 후 스크립트를 실행
 	
-	function setCookiePopUp ( name, value, expiredays ) {
+	function setCookieMobile ( name, value, expiredays ) {
 		var todayDate = new Date();
 		todayDate.setDate( todayDate.getDate() + expiredays );
 		document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
 	}
 	
-	function getCookiePopUp () {
+	function getCookieMobile () {
 		var cookiedata = document.cookie;
-		var dim = document.querySelector('.dim');
-		
-		if ( cookiedata.indexOf("todayCookie") == "done" < 0 ){
-			popup.style.display = 'none';
-			dim.style.display = 'none';
-			html.style.overflowY = "scroll";
+		if ( cookiedata.indexOf("todayCookier=done") < 0 ){
+			 console.log('done')
 		}
 		else {
-			popup.style.display = 'block';
-			dim.style.display = 'block';
-			html.style.overflowY = "hidden";
+			console.log('no')
 		}
 	}
+	
     var portBox = document.querySelector('.portfolio_popup');
     var portBtn = portBox.querySelector('.portfolio_popup_close a');
     
@@ -77,7 +72,7 @@ window.onload = function(){
         
         if (day == true){
             todayLabel.classList.add('checked');
-			setCookiePopUp( "todayCookie", "done" , 1);
+			setCookieMobile( "todayCookie", "done" , 1);
         } else{
             todayLabel.classList.remove('checked');
         };
