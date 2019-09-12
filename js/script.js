@@ -17,11 +17,10 @@ window.onload = function(){
     var closeBtn = popup.querySelector('.popup_close .close');
     var todayBtn = document.querySelector('.popup_close .today');
     var todayLabel = document.querySelector('.popup_close .today_none');
-    
+	
     closeBtn.addEventListener("click",popupNone);
     
     function popupNone(e){
-        var dim = document.querySelector('.dim');
         e.preventDefault();
         
         popup.style.display = 'none';
@@ -55,34 +54,47 @@ window.onload = function(){
         
         if (day == true){
             todayLabel.classList.add('checked');
-			setCookieMobile( "todayCookie", "done" , 1);
+			setCookie("popupclose", "yes", 1);
         } else{
             todayLabel.classList.remove('checked');
         };
     };
     
     // 체크박스 클릭시 checked 클래스 추가/삭제 스크립트
-	
-	function setCookieMobile ( name, value, expiredays ) {
-		var todayDate = new Date();
-		todayDate.setDate( todayDate.getDate() + expiredays );
-		document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
-	}
-	
-	function getCookieMobile () {
-		var cookiedata = document.cookie;
-		var dim = document.querySelector('.dim');
 		
-		if ( cookiedata.indexOf("todayCookier=done") < 0 ){
-			popup.style.display = 'none';
-			dim.style.display = 'none';
-			html.style.overflowY = "scroll";
+	if(GetCookie("close") == "yes"){ 
+		popup.style.display = 'none';
+        dim.style.display = 'none';
+        html.style.overflowY = "scroll";
+	}else{
+        popup.style.display = 'block';
+
+        html.style.overflowY = "hidden";
+	}
+
+	function setCookie(name, value, expiredays){
+		var days=expiredays;
+		if(days){
+			var date=new Date(); 
+			date.setTime(date.getTime()+(days*24*60*60*1000));
+			var expires="; expires="+date.toGMTString();
+		}else{
+			var expires=""; 
 		}
-		else {
-			popup.style.display = 'block';
-			dim.style.display = 'block';
-			html.style.overflowY = "hidden";
-		}
+		document.cookie=name+"="+value+expires+"; path=/";
+	}
+		
+	function GetCookie(name){
+		var value=null, search=name+"=";
+		if(document.cookie.length > 0){
+			var offset=document.cookie.indexOf(search);
+			if(offset != -1){
+				offset+=search.length;
+				var end=document.cookie.indexOf(";", offset);
+				if(end == -1) end=document.cookie.length;
+				value=unescape(document.cookie.substring(offset, end));
+			}
+		} return value;
 	}
 	
 	//
