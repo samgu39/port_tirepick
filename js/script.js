@@ -194,6 +194,18 @@ window.onload = function(){
         dim.style.display = 'block';
         html.style.overflowY = "hidden";
     };
+	
+	// 탭메뉴 클릭시 해당 탭메뉴 화면으로 전환
+	
+	var searchBox = document.querySelector('.popup01 .search form .search_text');
+	
+	searchBox.addEventListener("focus", searchFocus);
+	
+	function searchFocus(){
+		searchBox.placeholder = '';
+	};
+	
+	// searchbox에 포커스 되었을 경우 placeholder 값 삭제
     
     function popupDown(e){
         e.preventDefault();
