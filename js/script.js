@@ -1,22 +1,5 @@
 window.onload = function(){
     // 페이지가 로딩이 완료된 후 스크립트를 실행
-	
-	function setCookieMobile ( name, value, expiredays ) {
-		var todayDate = new Date();
-		todayDate.setDate( todayDate.getDate() + expiredays );
-		document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
-	}
-	
-	function getCookieMobile () {
-		var cookiedata = document.cookie;
-		if ( cookiedata.indexOf("todayCookier=done") < 0 ){
-			 console.log('done')
-		}
-		else {
-			console.log('no')
-		}
-	}
-	
     var portBox = document.querySelector('.portfolio_popup');
     var portBtn = portBox.querySelector('.portfolio_popup_close a');
     
@@ -375,3 +358,19 @@ window.onload = function(){
         // 스크롤값에 따른 효과 추가
     }
 };
+
+function setCookieMobile ( name, value, expiredays ) {
+		var todayDate = new Date();
+		todayDate.setDate( todayDate.getDate() + expiredays );
+		document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+	}
+	
+	function getCookieMobile () {
+		var cookiedata = document.cookie;
+		if ( cookiedata.indexOf("todayCookier=done") < 0 ){
+			 console.log('done')
+		}
+		else {
+			console.log('no')
+		}
+	}
