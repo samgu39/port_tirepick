@@ -57,6 +57,7 @@ window.onload = function(){
 			setCookie("popupclose", "yes", 1);
         } else{
             todayLabel.classList.remove('checked');
+			setCookie("popupclose", "no", 1);
         };
     };
     
