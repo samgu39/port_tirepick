@@ -213,7 +213,9 @@ window.onload = function(){
         dim.style.display = 'none';
         html.style.overflowY = "scroll";
 		
-		if(todayBtn.checked = true){setCookie("popupclose", "yes", 1)};
+		if(todayBtn.checked){
+			setCookie("popupclose", "yes", 1);
+		};
     };
     
     
