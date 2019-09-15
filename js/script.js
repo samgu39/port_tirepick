@@ -54,7 +54,6 @@ window.onload = function(){
         
         if (day == true){
             todayLabel.classList.add('checked');
-			setCookie("popupclose", "yes", 1);
         } else{
             todayLabel.classList.remove('checked');
         };
@@ -213,6 +212,8 @@ window.onload = function(){
         slideMenuBox.style.display = 'none';
         dim.style.display = 'none';
         html.style.overflowY = "scroll";
+		
+		if(todayBtn.checked = true){setCookie("popupclose", "yes", 1)};
     };
     
     
